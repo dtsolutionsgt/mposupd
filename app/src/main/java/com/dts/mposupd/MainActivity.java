@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
         lblTitle.setText("Descargando "+fname+"  . . . .");
         downloadFile();
+
     }
 
     private void downloadFile() {
