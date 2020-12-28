@@ -1,4 +1,4 @@
-package com.dts.mposupd;
+package com.dts.wmsupd;
 
 import android.app.Service;
 import android.content.Intent;
