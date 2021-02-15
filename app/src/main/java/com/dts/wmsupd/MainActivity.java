@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private int callback=0;
     private String fname;
 
-    private String packagename="com.dts.wms";
+    private String packagename="com.dts.tom";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,13 +68,7 @@ public class MainActivity extends AppCompatActivity {
     //region Main
 
     private void startApplication() {
-        try {
-            //fname=getIntent().getExtras().getString("filename");
-            fname="wms.apk";
-        } catch (Exception e) {
-            //toast("DTS Update\nNo está definido archivo de actualización");finish();
-            fname="wms.apk";
-        }
+        fname="tom.apk";
 
         if (isPackageInstalled()) {
             callback=1;
@@ -103,12 +97,14 @@ public class MainActivity extends AppCompatActivity {
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
-                    toastlong("DTS Update descarga\n"+exception.getMessage());finish();
+                    toastlong("DTS Update descarga\n"+exception.getMessage());
+                    finish();
                 }
             });
 
         } catch (Exception e) {
-            toastlong("DTS Update descarga\n"+e.getMessage());finish();
+            toastlong("DTS Update descarga\n"+e.getMessage());
+            finish();
         }
     }
 
