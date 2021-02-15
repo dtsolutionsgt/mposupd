@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private int callback=0;
     private String fname;
 
-    private String packagename="com.dts.tom";
+    private String packagename="com.dts.roadp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     //region Main
 
     private void startApplication() {
-        fname="tom.apk";
+        fname="road.apk";
 
         if (isPackageInstalled()) {
             callback=1;
