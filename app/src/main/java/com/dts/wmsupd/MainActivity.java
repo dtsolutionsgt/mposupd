@@ -27,7 +27,6 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 
-
 public class MainActivity extends AppCompatActivity {
 
     private TextView lblTitle;

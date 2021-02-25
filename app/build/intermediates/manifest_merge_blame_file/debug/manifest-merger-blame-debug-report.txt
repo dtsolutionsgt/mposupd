@@ -1,0 +1,121 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dts.mposupd"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:6:5-80
+12-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:6:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+14-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:8:5-83
+14-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:8:22-80
+15
+16    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+17    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\199cdd794bc6fbf0dfcae4ca73e3d612\jetified-firebase-storage-19.1.1\AndroidManifest.xml:26:5-79
+18-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\199cdd794bc6fbf0dfcae4ca73e3d612\jetified-firebase-storage-19.1.1\AndroidManifest.xml:26:22-76
+19
+20    <application
+20-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:10:5-31:19
+21        android:allowBackup="true"
+21-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:11:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\910e24fc762c7909e0c7bff281e94de2\core-1.1.0\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:icon="@drawable/mposupd"
+25-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:12:9-41
+26        android:label="@string/app_name"
+26-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:13:9-41
+27        android:roundIcon="@drawable/mposupd"
+27-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:14:9-46
+28        android:supportsRtl="true"
+28-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:16:9-35
+29        android:testOnly="true"
+30        android:theme="@style/AppTheme"
+30-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:17:9-40
+31        android:usesCleartextTraffic="true" >
+31-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:15:9-44
+32        <service
+32-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:18:9-21:47
+33            android:name="com.dts.wmsupd.APKInstallService"
+33-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:19:13-60
+34            android:enabled="true"
+34-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:20:13-35
+35            android:exported="true" />
+35-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:21:13-36
+36
+37        <activity android:name="com.dts.wmsupd.MainActivity" >
+37-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:23:9-29:20
+37-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:23:19-61
+38            <intent-filter>
+38-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:24:13-28:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:25:17-69
+39-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:25:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:27:17-77
+41-->C:\Users\DTS\Documents\Proyectos_DTS\Proyectos_2017\Guatemala\TOM-IMS\Aplicacion_Andr\wmsupd\app\src\main\AndroidManifest.xml:27:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <service
+45-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\199cdd794bc6fbf0dfcae4ca73e3d612\jetified-firebase-storage-19.1.1\AndroidManifest.xml:30:9-36:19
+46            android:name="com.google.firebase.components.ComponentDiscoveryService"
+46-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\199cdd794bc6fbf0dfcae4ca73e3d612\jetified-firebase-storage-19.1.1\AndroidManifest.xml:31:13-84
+47            android:directBootAware="true"
+47-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\561224d95afb1c86e82bde3d66c2b645\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+48            android:exported="false" >
+48-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\199cdd794bc6fbf0dfcae4ca73e3d612\jetified-firebase-storage-19.1.1\AndroidManifest.xml:32:13-37
+49            <meta-data
+49-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\199cdd794bc6fbf0dfcae4ca73e3d612\jetified-firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
+50                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+50-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\199cdd794bc6fbf0dfcae4ca73e3d612\jetified-firebase-storage-19.1.1\AndroidManifest.xml:34:17-107
+51                android:value="com.google.firebase.components.ComponentRegistrar" />
+51-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\199cdd794bc6fbf0dfcae4ca73e3d612\jetified-firebase-storage-19.1.1\AndroidManifest.xml:35:17-82
+52        </service>
+53
+54        <activity
+54-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\7c07e5a7fa6d974b3595f7f2f9a9eba1\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+55            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+55-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\7c07e5a7fa6d974b3595f7f2f9a9eba1\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+56            android:exported="false"
+56-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\7c07e5a7fa6d974b3595f7f2f9a9eba1\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+57            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+57-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\7c07e5a7fa6d974b3595f7f2f9a9eba1\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+58
+59        <provider
+59-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\561224d95afb1c86e82bde3d66c2b645\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+60            android:name="com.google.firebase.provider.FirebaseInitProvider"
+60-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\561224d95afb1c86e82bde3d66c2b645\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+61            android:authorities="com.dts.mposupd.firebaseinitprovider"
+61-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\561224d95afb1c86e82bde3d66c2b645\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+62            android:exported="false"
+62-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\561224d95afb1c86e82bde3d66c2b645\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+63            android:initOrder="100" />
+63-->[com.google.firebase:firebase-common:19.3.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\561224d95afb1c86e82bde3d66c2b645\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+64
+65        <meta-data
+65-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\a52bfb92d2b276c79d11db281b8aa668\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+66            android:name="com.google.android.gms.version"
+66-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\a52bfb92d2b276c79d11db281b8aa668\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+67            android:value="@integer/google_play_services_version" />
+67-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\DTS\AppData\Local\Android\Sdk\caches\transforms-2\files-2.1\a52bfb92d2b276c79d11db281b8aa668\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+68    </application>
+69
+70</manifest>

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\DTS\\Documents\\Proyectos_DTS\\Proyectos_2017\\Guatemala\\TOM-IMS\\Aplicacion_Andr\\wmsupd\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\DTS\\AppData\\Local\\Android\\Sdk\\caches\\transforms-2\\files-2.1\\d38bcf900577a63e0da310b3fe272179\\appcompat-1.1.0\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}
