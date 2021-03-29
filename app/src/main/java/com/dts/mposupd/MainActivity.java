@@ -4,54 +4,29 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import android.Manifest;
-import android.annotation.SuppressLint;
-import android.app.PendingIntent;
-import android.app.admin.DevicePolicyManager;
-import android.content.ComponentName;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentSender;
 import android.content.pm.PackageInstaller;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.net.Uri;
-import android.os.Binder;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.FileUtils;
 import android.os.Handler;
 import android.os.StrictMode;
-import android.os.UserManager;
-import android.provider.DocumentsContract;
-import android.provider.Settings;
-import android.se.omapi.Session;
 import android.view.Gravity;
-import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.common.util.IOUtils;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 
-
-import android.app.admin.DeviceAdminReceiver;
-
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 
-import static android.content.pm.PackageInstaller.SessionParams.MODE_FULL_INSTALL;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
     private PackageInstaller packageInstaller;
 
     private Uri localfile,fileUri;
+    private int callback=0;
     private String fname;
+
+    private String packagename="com.dtsgt.mpos";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
+
+        callback=0;
 
         Handler mtimer = new Handler();
         Runnable mrunner=new Runnable() {
@@ -96,18 +76,38 @@ public class MainActivity extends AppCompatActivity {
             fname="mpos.apk";
         }
 
-        lblTitle.setText("Descargando "+fname+"  . . . .");
-        downloadFile();
+        if (isPackageInstalled()) {
+            callback=1;
+            uninstallFile();
+        } else {
+            downloadFile();
+        }
 
     }
 
     private void downloadFile() {
+        lblTitle.setText("Descargando "+fname+"  . . . .");
+
         try {
             storage = FirebaseStorage.getInstance();
             storageReference = storage.getReference();
 
             localfile = Uri.fromFile(new File(Environment.getExternalStorageDirectory()+"/"+fname));
             StorageReference ref = storageReference.child(fname);
+
+            ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                @Override
+                public void onSuccess(Uri uri) {
+                    String ss=uri.toString();
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                }
+            });
+
 
             ref.getFile(localfile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                 @Override
@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             });
 
         } catch (Exception e) {
+            String ss=e.getMessage();
             toastlong("DTS Update descarga\n"+e.getMessage());finish();
         }
     }
@@ -138,6 +139,16 @@ public class MainActivity extends AppCompatActivity {
             finish();
         } catch (Exception e) {
             toastlong("DTS Update Instalación\n"+e.getMessage());finish();
+        }
+    }
+
+    private void uninstallFile() {
+        try {
+            Intent intent = new Intent(Intent.ACTION_DELETE);
+            intent.setData(Uri.parse("package:"+packagename));
+            startActivity(intent);
+        } catch (Exception e) {
+            toastlong("DTS Update uninstall\n"+e.getMessage());finish();
         }
     }
 
@@ -195,6 +206,30 @@ public class MainActivity extends AppCompatActivity {
                     fileExtension.toLowerCase());
         }
         return mimeType;
+    }
+
+    private boolean isPackageInstalled() {
+        try {
+            PackageManager pm = getPackageManager();
+            pm.getPackageInfo(packagename, 0);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
+    //endregion
+
+    //region Activity Events
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (callback==1) {
+            callback=0;
+            downloadFile();return;
+        }
     }
 
     //endregion
